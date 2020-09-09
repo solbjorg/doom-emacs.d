@@ -12,6 +12,9 @@
 ;; Here are a couple examples:
 (package! evil-args)
 (package! glsl-mode)
+(package! gdscript-mode
+  :recipe (:host github
+  :repo "GDQuest/emacs-gdscript-mode"))
 (after! glsl-mode
   (add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
   (add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
@@ -22,6 +25,10 @@
   (when (executable-find "glslangValidator")
     (add-to-list 'company-backends 'company-glsl))
 )
+(package! oberon)
+(after! oberon
+  (add-to-list 'auto-mode-alist '("\\.Mod\\'" . oberon-mode)
+  (autoload 'oberon-mode "oberon" nil t))
 ;; All of Doom's packages are pinned to a specific commit, and updated from
 ;; release to release. To un-pin all packages and live on the edge, do:
 ;(setq doom-pinned-packages nil)

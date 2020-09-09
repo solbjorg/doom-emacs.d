@@ -127,3 +127,14 @@
 (provide 'fira-code-mode)
 
 (add-hook! prog-mode 'fira-code-mode)
+
+;; hook c++ to godot nativescript files
+(add-to-list 'auto-mode-alist '("\\.gdns\\'" . cpp-mode))
+
+(use-package! gdscript-mode
+  :hook (gdscript-mode . lsp))
+
+(use-package! verilog-mode)
+(setq flycheck-verilog-verilator-executable "/usr/bin/verilator")
+
+(setq racer-rust-src-path "/home/rikkesol/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src")
