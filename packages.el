@@ -27,7 +27,7 @@
 )
 (package! oberon)
 (after! oberon
-  (add-to-list 'auto-mode-alist '("\\.Mod\\'" . oberon-mode)
+  (add-to-list 'auto-mode-alist '("\\.Mod\\'" . oberon-mode))
   (autoload 'oberon-mode "oberon" nil t))
 ;; All of Doom's packages are pinned to a specific commit, and updated from
 ;; release to release. To un-pin all packages and live on the edge, do:
